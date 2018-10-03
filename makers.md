@@ -76,6 +76,9 @@ A listing of names by which this maker may be referred.
 **begindate**  
 Integer representation of the earliest possible date associated with the maker (birth, as in the case of an individual). Dates before the Common Era are represented as negative values.
 
+**biography** 
+A brief textual description of the maker's life and work, composed by the Museum.
+
 **culturegroup**  
 Describes the cultural group to which this maker can be associated, if applicable.
 
