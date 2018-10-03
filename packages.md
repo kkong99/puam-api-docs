@@ -85,10 +85,14 @@ A string describing the package of objects.
 A listing of the objects included in this grouping.  
 
 `id` - The Object ID of the object. This can be used to retrieve additional data about the object using the [objects](https://github.com/danieltbrennan/puam-api-docs/blob/master/objects.md) endpoint.  
+`object_note` - A textual note specific to this object's context within this package. 
 `sortorder` - An integer describing the position in which the object should appear relative to the others in the grouping when displayed in a collective context.
 
 **packageid**  
 A unique numeric identifier for the package of objects.  
+
+**packagenote** 
+A textual note describing the contents and organizational rationale for this package.
 
 **published_date**  
 The date that the package of objects was most recently updated.  
