@@ -202,8 +202,17 @@ A list of values representing all available measurements for the object, represe
 **dimensions**  
 A human-readable version of the object's dimensions, more suitable for display purposes.
 
+**displayculture**
+A concatenated list of prefixes, cultures, and suffixes to be used for display purposes.
+
 **displaydate**  
 A human-readable version of the object's date, more suitable for display purposes.
+
+**displaymaker**
+A concatenated list of prefixes, periods, and suffixes to be used for display purposes. 
+
+**displayperiod**
+A concatenated list of prefixes, periods, and suffixes to be used for display purposes.
 
 **displaytitle**  
 The title of the object that should be used for display purposes.
@@ -231,7 +240,8 @@ Describes the artists, cultures, and other entities involved in the creation of 
 
 `datebegin` - Integer expressing the earliest date the entity existed (birth date in the case of an individual).  
 `dateend` - Integer expressing latest date that the entity existed (death in the case of an individual).  
-`displaydate` - A human-readable expression of the dates associated with the entity. In some cases also includes biographical information such as country or city of origin.  
+`displaydate` - A human-readable expression of the dates associated with the entity. In some cases also includes biographical information such as country or city of origin.
+`displaymaker` - A concatenated list of prefixes, periods, and suffixes, and life and death dates to be used for display purposes.
 `displayname` - A human-readable expression of the entity, as in a proper name.  
 `makerid` - A unique identifier for the entity.  
 `prefix` - A prefix indicating information relevant to this particular instance of the entity's relationship to the object, such as "After."  
@@ -255,14 +265,35 @@ A list of images and other media representing or associated with the object. Not
 **medium**  
 A string describing the materials and processes used to create the object.
 
+**newaccession** 
+Indicates whether this object has been acquired by the museum within the last two years. 
+
+**nowebuse**
+A flag indicating whether or not the object is available in general search results.
+
 **objectid**  
 The Museum's numeric unique machine-readable identifier for the object. Note that by appending this id to the url string [http://artmuseum.princeton.edu/collections/objects/](http://artmuseum.princeton.edu/collections/objects/) one can also construct a link to the object's page in the Museum's online collection.  
 
 **objectnumber**  
 The museum's internal identifier for the object, most commonly expressed as a combination of a four-digit year and various prefixes/suffixes meant to indicate characteristics about the object. In the museum lexicon this is also commonly referred to as an accession number, however loans and other objects not formally accessioned by the Museum receive these numbers as well.
 
+**packages** 
+A list of defined packages in which this object is included. 
+
+**periods**
+The chronological period in which the object was created.
+
+**primaryimage** 
+A IIIF image API url stub for the primary image for the object.
+
 **published_date**  
 The date that the object record was last updated.
+
+**restrictions**
+Indicates whether there are copyright restrictions around the use and reproduction of this object.
+
+**secondaryobjectnumber**
+An alternate number by which the object may be known. 
 
 **signed**  
 A string describing the presence of a signature on the object.
@@ -273,6 +304,7 @@ A version of the object number that has been algorithmically processed to enable
 **terms**  
 Terms from the Museum's own controlled taxonomy that describe the object.
 
+`aatid` - the unique identifier for the term in the Getty Art and Architecture Thesaurus, if applicable (http://www.getty.edu/research/tools/vocabularies/aat/).
 `id` - A unique identifier for the term.  
 `term` - The term.  
 
@@ -280,7 +312,8 @@ Terms from the Museum's own controlled taxonomy that describe the object.
 A listing of pieces of interpretive content related to the object that have been produced by the museum in the form of gallery labels, online web features, publications, etc.
 
 `remarks` - A string describing the origin of the text such as an exhibition or a publication.  
-`textentryhtml` - The text itself, including html formatting for online display.  
+`textentryhtml` - The text itself, including html formatting for online display. 
+`textpurpose` - A brief descriptor of the context in which this text was created. 
 `texttype` - The type of text, such as gallery label.  
 
 **titles**  
@@ -289,6 +322,9 @@ A listing of titles of the work and information about their origin and intended 
 `displayorder` - The order in which this title should be displayed relative to any others.  
 `title` - The title.  
 `titletype` - A string describing the nature of the title. "Primary title" is by far the most common value, though others can include "Translation" or "Title of Origin."
+
+**update_count**
+The number of times this object has been updated by Museum cataloguers.
 
 ## Get object tombstone by ID
 
